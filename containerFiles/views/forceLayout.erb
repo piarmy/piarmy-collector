@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>PiArmy: Collector</title>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+      .nodes circle {
+        stroke: #fff;
+        stroke-width: 1.5px;
+      }
+
+      .links line {
+        stroke: #ccc;
+        stroke-opacity: 0.6;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%
+      }
+
+    </style>
+
+  </head>
+  <body>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script
+      src="http://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+  </body>
+
+  <script>
+$( document ).ready(function() {
+
+  function getForceData(){
+    $.ajax({
+      url: "http://piarmy01:8000/containers/force?callback=force",
+
+      // The name of the callback parameter
+      jsonp: "callback",
+   
+      // Tell jQuery we're expecting JSONP
+      dataType: "jsonp",
+   
+      // Work with the response
+      success: function(forceLayoutData) {
+        console.log(forceLayoutData);
+        nodeGraph(forceLayoutData);
+      },
+      error: function( error ) {
+        console.log(error);
+      }
+    });
+  }
+
+  function nodeGraph(forceLayoutData){
+
+    json       = forceLayoutData;
+    
+    var width  = window.innerWidth  - 100;
+    var height = window.innerHeight - 100;
+
+    if(Math.abs(width % 2) == 1){
+      width -= 1;
+    }
+
+    if(Math.abs(height % 2) == 1){
+      height -= 1;
+    }
+
+    var svg = d3.select("body").append("svg")
+      .attr("width", width)
+      .attr("height", height)
+      .attr("viewBox", "0 0 " +width+ " "+height);
+
+    var simulation = d3.forceSimulation()
+      .force("center", d3.forceCenter(width / 2, height / 2))
+      .force("charge", d3.forceManyBody()
+        .strength(-1000))
+      .force("link", d3.forceLink()
+        .distance(function(n) { return n.distance; })
+        .strength(function(n) { return n.strength; }));
+
+    simulation
+      .nodes(json.nodes);
+    
+    simulation
+      .force("link")
+      .links(json.links);
+
+    var link = svg.append("g")
+      .attr("class", "links")
+      .selectAll("line")
+      .data(json.links)
+      .enter().append("line")
+        .attr("stroke-width", function(d) { return Math.sqrt(d.strokeWidth); });
+
+    var node = svg.selectAll(".node")
+      .data(json.nodes)
+      .enter().append("g")
+      .attr("class", "node");
+
+    var dockerNodes = node.filter(function (d, i) {
+      return d.type == "node";
+    });
+
+    var dockerContainers = node.filter(function (d, i) {
+      return d.type == "container";
+    });
+
+    dockerNodes.append("circle")
+      .attr("r", function(d) { return d.radius; })
+      .attr("fill", function(d) { return d.color; })
+      .call(d3.drag()
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended));
+
+    dockerContainers.append("circle")
+      .attr("r", function(d) { return d.radius; })
+      .attr("fill", function(d) { return d.color; })
+      .call(d3.drag()
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended));
+
+    console.log(dockerNodes);
+    console.log(dockerNodes);
+
+    node.append("text")
+      .attr("dx", 12)
+      .attr("dy", ".35em")
+      .text(function(d) { return d.name });
+
+    simulation.on("tick", function() {
+      link.attr("x1", function(d) { return d.source.x; })
+          .attr("y1", function(d) { return d.source.y; })
+          .attr("x2", function(d) { return d.target.x; })
+          .attr("y2", function(d) { return d.target.y; });
+
+      node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+    });
+
+    function dragstarted(d) {
+      if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+      d.fx = d.x;
+      d.fy = d.y;
+    }
+
+    function dragged(d) {
+      d.fx = d3.event.x;
+      d.fy = d3.event.y;
+    }
+
+    function dragended(d) {
+      if (!d3.event.active) simulation.alphaTarget(0);
+      d.fx = null;
+      d.fy = null;
+    }
+  }
+
+  getForceData(); 
+  
+});
+</script>
+</html>

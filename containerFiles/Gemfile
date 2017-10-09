@@ -1,0 +1,9 @@
+source 'https://rubygems.org'
+ruby '2.4.1'
+
+gem 'awesome_print'
+gem 'redis'
+gem 'thin'
+gem 'sinatra'
+gem 'multi_json'
+gem 'websocket-eventmachine-server'

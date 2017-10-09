@@ -1,0 +1,667 @@
+[
+    {
+        "Id": "55e56b818ee45c1b7fc909a62c5af6409a94ec2e8dc4c849731cd9de8b240763",
+        "Created": "2017-09-20T15:31:04.556118339Z",
+        "Path": "sudo",
+        "Args": [
+            "thin",
+            "start",
+            "-p",
+            "80",
+            "-R",
+            "config.ru"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 18113,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2017-09-20T15:31:08.232959045Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:ac42a1ed4e72841f1b9bf0c94691c68b0ac1911854ce16601d4bfaaff4252905",
+        "ResolvConfPath": "/var/lib/docker/containers/55e56b818ee45c1b7fc909a62c5af6409a94ec2e8dc4c849731cd9de8b240763/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/55e56b818ee45c1b7fc909a62c5af6409a94ec2e8dc4c849731cd9de8b240763/hostname",
+        "HostsPath": "/var/lib/docker/containers/55e56b818ee45c1b7fc909a62c5af6409a94ec2e8dc4c849731cd9de8b240763/hosts",
+        "LogPath": "/var/lib/docker/containers/55e56b818ee45c1b7fc909a62c5af6409a94ec2e8dc4c849731cd9de8b240763/55e56b818ee45c1b7fc909a62c5af6409a94ec2e8dc4c849731cd9de8b240763-json.log",
+        "Name": "/piarmy_lambda.1.zf7r5chc0qqy0ns1awrbuqcjl",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DiskQuota": 0,
+            "KernelMemory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": -1,
+            "OomKillDisable": false,
+            "PidsLimit": 0,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/11404b2842eb89aee632be2e09c7a2f494bbfc58f82eaf3c717efb30468588ed-init/diff:/var/lib/docker/overlay2/26e3aea22fa37b52a255d101bbf98383f7d6ee98dc9da5ec30ec11e4e3014105/diff:/var/lib/docker/overlay2/baba5a9f8141851758af9c17e7b362ddbe53047c3dbbc2375ec42d1d87756008/diff:/var/lib/docker/overlay2/b8163bc74d650e4cc605c5e8200a2895d309003c89ae948a063926b2f9a55172/diff:/var/lib/docker/overlay2/5811e40afa45accb2552714eb86ed88803e0a17ed532c01b748cc012a758c79e/diff:/var/lib/docker/overlay2/56216929e92f4a7cfb4fd34b744299bf49b1c496c14eb4ad7afcd9ec2a9f4503/diff",
+                "MergedDir": "/var/lib/docker/overlay2/11404b2842eb89aee632be2e09c7a2f494bbfc58f82eaf3c717efb30468588ed/merged",
+                "UpperDir": "/var/lib/docker/overlay2/11404b2842eb89aee632be2e09c7a2f494bbfc58f82eaf3c717efb30468588ed/diff",
+                "WorkDir": "/var/lib/docker/overlay2/11404b2842eb89aee632be2e09c7a2f494bbfc58f82eaf3c717efb30468588ed/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "piarmy-lambda",
+            "Domainname": "",
+            "User": "docker",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "80/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "sudo",
+                "thin",
+                "start",
+                "-p",
+                "80",
+                "-R",
+                "config.ru"
+            ],
+            "ArgsEscaped": true,
+            "Image": "mattwiater/piarmy-lambda:latest@sha256:6974fbf59bb1c7bc54c7a8b104e28d928c3594b26d85021868e111e5e949e167",
+            "Volumes": null,
+            "WorkingDir": "/home/docker/www",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.stack.namespace": "piarmy",
+                "com.docker.swarm.node.id": "qyytairs6byqb3prvfl4aohoo",
+                "com.docker.swarm.service.id": "66p26n68g1xpwgsldjf4layqu",
+                "com.docker.swarm.service.name": "piarmy_lambda",
+                "com.docker.swarm.task": "",
+                "com.docker.swarm.task.id": "zf7r5chc0qqy0ns1awrbuqcjl",
+                "com.docker.swarm.task.name": "piarmy_lambda.1.zf7r5chc0qqy0ns1awrbuqcjl"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "e57f1e07fcfde93b26c14d0d07682f5c4027a488ba87e5929d8e658d0363ebb0",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "80/tcp": null
+            },
+            "SandboxKey": "/var/run/docker/netns/e57f1e07fcfd",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "ingress": {
+                    "IPAMConfig": {
+                        "IPv4Address": "10.255.0.17"
+                    },
+                    "Links": null,
+                    "Aliases": [
+                        "55e56b818ee4"
+                    ],
+                    "NetworkID": "4i7l4fsy1z27zmwa6uujvzww8",
+                    "EndpointID": "082f4e8e7c07d088367ae92a40f8a70540490fedb926ef8be91c893924843523",
+                    "Gateway": "",
+                    "IPAddress": "10.255.0.17",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:0a:ff:00:11"
+                },
+                "piarmy": {
+                    "IPAMConfig": {
+                        "IPv4Address": "10.0.0.13"
+                    },
+                    "Links": null,
+                    "Aliases": [
+                        "55e56b818ee4"
+                    ],
+                    "NetworkID": "ok4732dc5sly68upbb9v6lifm",
+                    "EndpointID": "4c796e98c7b8d077910610b641050b1319b816f1a71679f9b2a5d6c9c23fbad7",
+                    "Gateway": "",
+                    "IPAddress": "10.0.0.13",
+                    "IPPrefixLen": 24,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:0a:00:00:0d"
+                }
+            }
+        }
+    },
+    {
+        "Id": "7823800185e34e03483bf7a360578362789e73deace4857582dd3a4bbbce2021",
+        "Created": "2017-09-20T15:31:03.701690058Z",
+        "Path": "sudo",
+        "Args": [
+            "httpd",
+            "-f",
+            "-p",
+            "80",
+            "-h",
+            "/www"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 17954,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2017-09-20T15:31:07.318612159Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:4ecf2f17cfff745eda35f4d3d2c0489825e1eb17096dc9c0b43c5386af6e91b5",
+        "ResolvConfPath": "/var/lib/docker/containers/7823800185e34e03483bf7a360578362789e73deace4857582dd3a4bbbce2021/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/7823800185e34e03483bf7a360578362789e73deace4857582dd3a4bbbce2021/hostname",
+        "HostsPath": "/var/lib/docker/containers/7823800185e34e03483bf7a360578362789e73deace4857582dd3a4bbbce2021/hosts",
+        "LogPath": "/var/lib/docker/containers/7823800185e34e03483bf7a360578362789e73deace4857582dd3a4bbbce2021/7823800185e34e03483bf7a360578362789e73deace4857582dd3a4bbbce2021-json.log",
+        "Name": "/piarmy_webserver.2.pm706qldwig6h7sssxq57c00o",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DiskQuota": 0,
+            "KernelMemory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": -1,
+            "OomKillDisable": false,
+            "PidsLimit": 0,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/0ae3d1ad6d7116124e4dc5b64a199428f2b811907e26263c5f2728043b07c0a2-init/diff:/var/lib/docker/overlay2/731b076d62f50074c90a269a0db0e04ccd7635c8f0d0b24a7ba0fac5988d9117/diff:/var/lib/docker/overlay2/7863fc6e08cb785ac402527ba090487b8a33a5a971d840bab0a627a901c3d7ea/diff:/var/lib/docker/overlay2/1f9abeb4cba8896889eed493e21f6136851cd770a953c7a8a11cfff46f9436b6/diff:/var/lib/docker/overlay2/56216929e92f4a7cfb4fd34b744299bf49b1c496c14eb4ad7afcd9ec2a9f4503/diff",
+                "MergedDir": "/var/lib/docker/overlay2/0ae3d1ad6d7116124e4dc5b64a199428f2b811907e26263c5f2728043b07c0a2/merged",
+                "UpperDir": "/var/lib/docker/overlay2/0ae3d1ad6d7116124e4dc5b64a199428f2b811907e26263c5f2728043b07c0a2/diff",
+                "WorkDir": "/var/lib/docker/overlay2/0ae3d1ad6d7116124e4dc5b64a199428f2b811907e26263c5f2728043b07c0a2/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "piarmy-webserver",
+            "Domainname": "",
+            "User": "docker",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "80/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "sudo",
+                "httpd",
+                "-f",
+                "-p",
+                "80",
+                "-h",
+                "/www"
+            ],
+            "ArgsEscaped": true,
+            "Image": "mattwiater/piarmy-webserver:latest@sha256:1674a336a1fb75cb5a632bea974a46d40f4dc442955e183269376c504eb4781b",
+            "Volumes": null,
+            "WorkingDir": "/www",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.stack.namespace": "piarmy",
+                "com.docker.swarm.node.id": "qyytairs6byqb3prvfl4aohoo",
+                "com.docker.swarm.service.id": "kwt10oj2ya956m7lxicp14h5w",
+                "com.docker.swarm.service.name": "piarmy_webserver",
+                "com.docker.swarm.task": "",
+                "com.docker.swarm.task.id": "pm706qldwig6h7sssxq57c00o",
+                "com.docker.swarm.task.name": "piarmy_webserver.2.pm706qldwig6h7sssxq57c00o"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "2f7ed773b45fc50c1a9a29fe7e377dfe1d9da5302c60f964e239ce187283a8a7",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "80/tcp": null
+            },
+            "SandboxKey": "/var/run/docker/netns/2f7ed773b45f",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "ingress": {
+                    "IPAMConfig": {
+                        "IPv4Address": "10.255.0.10"
+                    },
+                    "Links": null,
+                    "Aliases": [
+                        "7823800185e3"
+                    ],
+                    "NetworkID": "4i7l4fsy1z27zmwa6uujvzww8",
+                    "EndpointID": "7147f7d39050e6f89e199d8c451820d02839ba624127868bb21a64a0936a5515",
+                    "Gateway": "",
+                    "IPAddress": "10.255.0.10",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:0a:ff:00:0a"
+                },
+                "piarmy": {
+                    "IPAMConfig": {
+                        "IPv4Address": "10.0.0.6"
+                    },
+                    "Links": null,
+                    "Aliases": [
+                        "7823800185e3"
+                    ],
+                    "NetworkID": "ok4732dc5sly68upbb9v6lifm",
+                    "EndpointID": "17b2bf882da68e89afce8a5980e2c119328623326b697f56cf90367ce9f8086c",
+                    "Gateway": "",
+                    "IPAddress": "10.0.0.6",
+                    "IPPrefixLen": 24,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:0a:00:00:06"
+                }
+            }
+        }
+    },
+    {
+        "Id": "704be83a4824224cfcdaf198ce72546a7b7ded9b071d8764b343c1c7c1ee503a",
+        "Created": "2017-09-11T01:15:04.366305775Z",
+        "Path": "/var/www/localhost/start.sh",
+        "Args": [],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 1451,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2017-09-20T15:07:53.741738926Z",
+            "FinishedAt": "2017-09-18T17:17:15.803145956Z"
+        },
+        "Image": "sha256:ef859093d859895a0e5a29dc663a915fe38b8ab78cf1f1980b55957b771aaecf",
+        "ResolvConfPath": "/var/lib/docker/containers/704be83a4824224cfcdaf198ce72546a7b7ded9b071d8764b343c1c7c1ee503a/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/704be83a4824224cfcdaf198ce72546a7b7ded9b071d8764b343c1c7c1ee503a/hostname",
+        "HostsPath": "/var/lib/docker/containers/704be83a4824224cfcdaf198ce72546a7b7ded9b071d8764b343c1c7c1ee503a/hosts",
+        "LogPath": "/var/lib/docker/containers/704be83a4824224cfcdaf198ce72546a7b7ded9b071d8764b343c1c7c1ee503a/704be83a4824224cfcdaf198ce72546a7b7ded9b071d8764b343c1c7c1ee503a-json.log",
+        "Name": "/piarmy-wordpress",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {
+                "3306/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "3306"
+                    }
+                ],
+                "80/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "9000"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "unless-stopped",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DiskQuota": 0,
+            "KernelMemory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": -1,
+            "OomKillDisable": false,
+            "PidsLimit": 0,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "bind",
+                    "Source": "/home/pi/images/piarmy-wordpress/containerFiles/public",
+                    "Target": "/var/www/localhost/htdocs"
+                }
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/268c2ec6214e0e9dbea2e8576bbee2b2e2493e37967c26d4001895ecbecebbfd-init/diff:/var/lib/docker/overlay2/14d729e2db354f90478e486f4d0d971a29d595e7c98a8a85757d80aba52eca7e/diff:/var/lib/docker/overlay2/a1a3b921d2bb919ade36a34c451823da4daea71efcb196db2e06603ee55f2146/diff:/var/lib/docker/overlay2/6700e1858c83aae13f7f1ea4832242e25569359421a83df2630b2cafdd049359/diff:/var/lib/docker/overlay2/f77c36daaae99eae24ebea5bb68e83692c90ab66e2ed963291def583b0b45b1c/diff:/var/lib/docker/overlay2/0970614f1fcddb0db781369571cb72330efbc36f62f379c88a6cb96d80468b34/diff:/var/lib/docker/overlay2/56216929e92f4a7cfb4fd34b744299bf49b1c496c14eb4ad7afcd9ec2a9f4503/diff",
+                "MergedDir": "/var/lib/docker/overlay2/268c2ec6214e0e9dbea2e8576bbee2b2e2493e37967c26d4001895ecbecebbfd/merged",
+                "UpperDir": "/var/lib/docker/overlay2/268c2ec6214e0e9dbea2e8576bbee2b2e2493e37967c26d4001895ecbecebbfd/diff",
+                "WorkDir": "/var/lib/docker/overlay2/268c2ec6214e0e9dbea2e8576bbee2b2e2493e37967c26d4001895ecbecebbfd/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/home/pi/images/piarmy-wordpress/containerFiles/public",
+                "Destination": "/var/www/localhost/htdocs",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "704be83a4824",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "3306/tcp": {},
+                "80/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "MYSQL_ROOT_PASSWORD=12345",
+                "WP_HOME=http://piarmy.ngrok.io",
+                "WP_SITEURL=http://piarmy.ngrok.io",
+                "DB_HOST=127.0.0.1:3306",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "TIMEZONE=America/Los_Angeles"
+            ],
+            "Cmd": [
+                "/var/www/localhost/start.sh"
+            ],
+            "ArgsEscaped": true,
+            "Image": "mattwiater/piarmy-wordpress",
+            "Volumes": null,
+            "WorkingDir": "/var/www/localhost/htdocs",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "maintainer": "matt@brightpixel.com"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "ce38d5bdc51c67b93118fa131bdacce7db8844e5ba9dd47703c581e2e2b36e34",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "3306/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "3306"
+                    }
+                ],
+                "80/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "9000"
+                    }
+                ]
+            },
+            "SandboxKey": "/var/run/docker/netns/ce38d5bdc51c",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "8bbfee33174c99a073fb44c0141feb7b55f275c3a73d33743ed896ed18750c02",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "02:42:ac:11:00:02",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "3a1474b0392b28559019e44f5562896af7cb3d7ac766b3f02d6dd5ad28706b91",
+                    "EndpointID": "8bbfee33174c99a073fb44c0141feb7b55f275c3a73d33743ed896ed18750c02",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:11:00:02"
+                }
+            }
+        }
+    }
+]

@@ -1,0 +1,120 @@
+body {
+  color: #fff;
+}
+
+.dockerNode {
+  padding:20px;
+  background: #046380;
+  border-bottom: solid 2px #fff;
+}
+
+.dockerNode-label {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom:10px;
+}
+
+.dockerContainer {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+  font-weight: 400;
+  border: dashed 2px #046380;
+  margin-right:20px;
+  margin-bottom:20px;
+  background: #fff;
+  color: #046380;
+  padding: 10px;
+}
+
+.dockerNode .node-stats {
+  margin-left: 15px;
+}
+
+
+
+.card-container {
+  margin-bottom: 30px;
+}
+
+.card {
+  background: #fff;
+  color: #046380;
+  box-shadow: 3px 3px 20px #272727;
+  border: 1px solid #000000;
+}
+
+.card .icon {
+  padding-top:5px;
+  padding-bottom:3px;
+  text-align: center;
+  font-size:3em;
+  opacity: 0.50;
+}
+
+.card .content h3 {
+  font-family: 'Oswald', sans-serif;
+  margin-top: 0px;
+  padding-top:10px;
+  text-align: center;
+}
+
+table.container-stats {
+  width: 100%;
+}
+
+table.container-stats tr {
+  vertical-align: top;
+}
+
+table.container-stats tr td {
+  width: 50%;
+}
+
+table.main-data {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 0.8em;
+  table-layout: fixed;
+}
+
+table.main-data tr td {
+  padding-top: 3px;
+  padding-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: top;
+  white-space: -o-pre-wrap; 
+  word-wrap: break-word;
+  white-space: pre-wrap; 
+  white-space: -moz-pre-wrap; 
+  white-space: -pre-wrap; 
+
+}
+
+@keyframes highlight {
+  0% {
+    background: #ffffff;
+    color: #046380;
+  }
+  100% {
+    background: none;
+    color: #ffffff;
+  }
+}
+
+.sparkline  {
+  display: block;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 3px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.sparkline canvas {
+  margin-left: 0px;
+  width: 100%;
+}
