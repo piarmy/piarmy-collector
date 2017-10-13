@@ -41,3 +41,46 @@ sudo systemctl stop collector.service && \
   sudo systemctl start collector.service && \
   sudo journalctl -f -u collector.service
 ```
+
+
+# Create mapping template
+curl -XPUT 'piarmy04:9200/docker_swarm_nodes' -H 'Content-Type: application/json' -d'
+{
+  "mappings": {
+    "docker_swarm_nodes": {
+      "properties": {
+        "date": {
+         "type": "date"
+        },
+        "Ip": {
+         "type": "ip"
+        },
+        "HDD.free": {
+         "type": "float"
+        },
+        "HDD.total": {
+         "type": "float"
+        },
+        "HDD.used": {
+         "type": "float"
+        },
+        "RAM.free": {
+         "type": "float"
+        },
+        "RAM.total": {
+         "type": "float"
+        },
+        "RAM.used": {
+         "type": "float"
+        },
+        "CPU": {
+         "type": "float"
+        },
+        "Temp": {
+         "type": "float"
+        }
+      }
+    }
+  }
+}
+'

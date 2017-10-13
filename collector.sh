@@ -6,7 +6,7 @@ clear
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 collectorContainer="piarmy_collector"
-elasticsearchContainer="piarmy_elasticsearch"
+elasticsearchContainer="elasticsearch"
 elasticsearchNode="piarmy04"
 
 timestamp() {
