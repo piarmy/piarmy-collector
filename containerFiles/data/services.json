@@ -1,325 +1,13 @@
 [
     {
-        "ID": "05fpfmb9rnmpc4zob20exiln4",
+        "ID": "cvnnz63zo2b0stlg9byy8owm2",
         "Version": {
-            "Index": 501
+            "Index": 110
         },
-        "CreatedAt": "2017-10-10T16:35:42.838848264Z",
-        "UpdatedAt": "2017-10-12T23:41:18.995468782Z",
+        "CreatedAt": "2017-10-16T15:39:39.413795865Z",
+        "UpdatedAt": "2017-10-16T15:41:13.461641258Z",
         "Spec": {
-            "Name": "piarmy_webserver",
-            "Labels": {
-                "com.docker.stack.namespace": "piarmy"
-            },
-            "TaskTemplate": {
-                "ContainerSpec": {
-                    "Image": "mattwiater/piarmy-webserver:latest@sha256:cc9fd913043725cea7b1e30364ce7879dcbea8b19ab5e21e7c29f44d362da0c5",
-                    "Labels": {
-                        "com.docker.stack.namespace": "piarmy"
-                    },
-                    "Hostname": "piarmy-webserver",
-                    "StopGracePeriod": 10000000000,
-                    "DNSConfig": {}
-                },
-                "Resources": {},
-                "RestartPolicy": {
-                    "Condition": "any",
-                    "Delay": 10000000000,
-                    "MaxAttempts": 10,
-                    "Window": 60000000000
-                },
-                "Placement": {},
-                "Networks": [
-                    {
-                        "Target": "w60lb6bt15zy2a4l9f3deakab",
-                        "Aliases": [
-                            "webserver"
-                        ]
-                    }
-                ],
-                "ForceUpdate": 0
-            },
-            "Mode": {
-                "Replicated": {
-                    "Replicas": 4
-                }
-            },
-            "UpdateConfig": {
-                "Parallelism": 1,
-                "FailureAction": "pause",
-                "Monitor": 5000000000,
-                "MaxFailureRatio": 0,
-                "Order": "stop-first"
-            },
-            "RollbackConfig": {
-                "Parallelism": 1,
-                "FailureAction": "pause",
-                "Monitor": 5000000000,
-                "MaxFailureRatio": 0,
-                "Order": "stop-first"
-            },
-            "EndpointSpec": {
-                "Mode": "vip",
-                "Ports": [
-                    {
-                        "Protocol": "tcp",
-                        "TargetPort": 80,
-                        "PublishedPort": 80,
-                        "PublishMode": "ingress"
-                    }
-                ]
-            }
-        },
-        "Endpoint": {
-            "Spec": {
-                "Mode": "vip",
-                "Ports": [
-                    {
-                        "Protocol": "tcp",
-                        "TargetPort": 80,
-                        "PublishedPort": 80,
-                        "PublishMode": "ingress"
-                    }
-                ]
-            },
-            "Ports": [
-                {
-                    "Protocol": "tcp",
-                    "TargetPort": 80,
-                    "PublishedPort": 80,
-                    "PublishMode": "ingress"
-                }
-            ],
-            "VirtualIPs": [
-                {
-                    "NetworkID": "o35o2nu8it3676gr5p3k6xzx0",
-                    "Addr": "10.255.0.17/16"
-                },
-                {
-                    "NetworkID": "w60lb6bt15zy2a4l9f3deakab",
-                    "Addr": "10.0.0.13/24"
-                }
-            ]
-        }
-    },
-    {
-        "ID": "72gc2p8fibca7c89txc8w4l21",
-        "Version": {
-            "Index": 501
-        },
-        "CreatedAt": "2017-10-10T16:32:09.780401132Z",
-        "UpdatedAt": "2017-10-12T23:41:18.995717792Z",
-        "Spec": {
-            "Name": "elasticsearch_kibana",
-            "Labels": {
-                "com.docker.stack.namespace": "elasticsearch"
-            },
-            "TaskTemplate": {
-                "ContainerSpec": {
-                    "Image": "mattwiater/piarmy-elasticsearch-kibana:latest@sha256:fb056be78fe3e1d74a52db488d1d26ef0ba74a9ffac9050421031aba439b7cdb",
-                    "Labels": {
-                        "com.docker.stack.namespace": "elasticsearch"
-                    },
-                    "StopGracePeriod": 10000000000,
-                    "DNSConfig": {}
-                },
-                "Resources": {},
-                "RestartPolicy": {
-                    "Condition": "any",
-                    "Delay": 10000000000,
-                    "MaxAttempts": 10,
-                    "Window": 60000000000
-                },
-                "Placement": {
-                    "Constraints": [
-                        "node.labels.name == piarmy04"
-                    ]
-                },
-                "Networks": [
-                    {
-                        "Target": "w60lb6bt15zy2a4l9f3deakab",
-                        "Aliases": [
-                            "kibana"
-                        ]
-                    }
-                ],
-                "ForceUpdate": 0
-            },
-            "Mode": {
-                "Replicated": {
-                    "Replicas": 1
-                }
-            },
-            "UpdateConfig": {
-                "Parallelism": 1,
-                "FailureAction": "pause",
-                "Monitor": 5000000000,
-                "MaxFailureRatio": 0,
-                "Order": "stop-first"
-            },
-            "RollbackConfig": {
-                "Parallelism": 1,
-                "FailureAction": "pause",
-                "Monitor": 5000000000,
-                "MaxFailureRatio": 0,
-                "Order": "stop-first"
-            },
-            "EndpointSpec": {
-                "Mode": "vip",
-                "Ports": [
-                    {
-                        "Protocol": "tcp",
-                        "TargetPort": 5601,
-                        "PublishedPort": 5601,
-                        "PublishMode": "ingress"
-                    }
-                ]
-            }
-        },
-        "Endpoint": {
-            "Spec": {
-                "Mode": "vip",
-                "Ports": [
-                    {
-                        "Protocol": "tcp",
-                        "TargetPort": 5601,
-                        "PublishedPort": 5601,
-                        "PublishMode": "ingress"
-                    }
-                ]
-            },
-            "Ports": [
-                {
-                    "Protocol": "tcp",
-                    "TargetPort": 5601,
-                    "PublishedPort": 5601,
-                    "PublishMode": "ingress"
-                }
-            ],
-            "VirtualIPs": [
-                {
-                    "NetworkID": "o35o2nu8it3676gr5p3k6xzx0",
-                    "Addr": "10.255.0.8/16"
-                },
-                {
-                    "NetworkID": "w60lb6bt15zy2a4l9f3deakab",
-                    "Addr": "10.0.0.4/24"
-                }
-            ]
-        }
-    },
-    {
-        "ID": "edyg0ro9w1dsre9d27y8jn1z5",
-        "Version": {
-            "Index": 501
-        },
-        "CreatedAt": "2017-10-10T16:35:39.854595266Z",
-        "UpdatedAt": "2017-10-12T23:41:18.995877063Z",
-        "Spec": {
-            "Name": "piarmy_lambda",
-            "Labels": {
-                "com.docker.stack.namespace": "piarmy"
-            },
-            "TaskTemplate": {
-                "ContainerSpec": {
-                    "Image": "mattwiater/piarmy-lambda:latest@sha256:791d8c251a9921098d8090dae37056ee6d41bfe3206cb008c4f3f980f57806c9",
-                    "Labels": {
-                        "com.docker.stack.namespace": "piarmy"
-                    },
-                    "Hostname": "piarmy-lambda",
-                    "StopGracePeriod": 10000000000,
-                    "DNSConfig": {}
-                },
-                "Resources": {},
-                "RestartPolicy": {
-                    "Condition": "any",
-                    "Delay": 10000000000,
-                    "MaxAttempts": 10,
-                    "Window": 60000000000
-                },
-                "Placement": {},
-                "Networks": [
-                    {
-                        "Target": "w60lb6bt15zy2a4l9f3deakab",
-                        "Aliases": [
-                            "lambda"
-                        ]
-                    }
-                ],
-                "ForceUpdate": 0
-            },
-            "Mode": {
-                "Replicated": {
-                    "Replicas": 4
-                }
-            },
-            "UpdateConfig": {
-                "Parallelism": 1,
-                "FailureAction": "pause",
-                "Monitor": 5000000000,
-                "MaxFailureRatio": 0,
-                "Order": "stop-first"
-            },
-            "RollbackConfig": {
-                "Parallelism": 1,
-                "FailureAction": "pause",
-                "Monitor": 5000000000,
-                "MaxFailureRatio": 0,
-                "Order": "stop-first"
-            },
-            "EndpointSpec": {
-                "Mode": "vip",
-                "Ports": [
-                    {
-                        "Protocol": "tcp",
-                        "TargetPort": 80,
-                        "PublishedPort": 8002,
-                        "PublishMode": "ingress"
-                    }
-                ]
-            }
-        },
-        "Endpoint": {
-            "Spec": {
-                "Mode": "vip",
-                "Ports": [
-                    {
-                        "Protocol": "tcp",
-                        "TargetPort": 80,
-                        "PublishedPort": 8002,
-                        "PublishMode": "ingress"
-                    }
-                ]
-            },
-            "Ports": [
-                {
-                    "Protocol": "tcp",
-                    "TargetPort": 80,
-                    "PublishedPort": 8002,
-                    "PublishMode": "ingress"
-                }
-            ],
-            "VirtualIPs": [
-                {
-                    "NetworkID": "o35o2nu8it3676gr5p3k6xzx0",
-                    "Addr": "10.255.0.10/16"
-                },
-                {
-                    "NetworkID": "w60lb6bt15zy2a4l9f3deakab",
-                    "Addr": "10.0.0.6/24"
-                }
-            ]
-        }
-    },
-    {
-        "ID": "kvzyvgmr2d69z70cjm2w1km43",
-        "Version": {
-            "Index": 501
-        },
-        "CreatedAt": "2017-10-10T16:32:08.287242966Z",
-        "UpdatedAt": "2017-10-12T23:41:18.996064615Z",
-        "Spec": {
-            "Name": "elasticsearch_elasticsearch",
+            "Name": "elasticsearch_server",
             "Labels": {
                 "com.docker.stack.namespace": "elasticsearch"
             },
@@ -357,9 +45,9 @@
                 },
                 "Networks": [
                     {
-                        "Target": "w60lb6bt15zy2a4l9f3deakab",
+                        "Target": "y5koc6h07efrojr44lxi6d718",
                         "Aliases": [
-                            "elasticsearch"
+                            "server"
                         ]
                     }
                 ],
@@ -383,6 +71,74 @@
                 "Monitor": 5000000000,
                 "MaxFailureRatio": 0,
                 "Order": "stop-first"
+            },
+            "EndpointSpec": {
+                "Mode": "vip",
+                "Ports": [
+                    {
+                        "Protocol": "tcp",
+                        "TargetPort": 9200,
+                        "PublishedPort": 9200,
+                        "PublishMode": "ingress"
+                    },
+                    {
+                        "Protocol": "tcp",
+                        "TargetPort": 9300,
+                        "PublishedPort": 9300,
+                        "PublishMode": "ingress"
+                    }
+                ]
+            }
+        },
+        "PreviousSpec": {
+            "Name": "elasticsearch_server",
+            "Labels": {
+                "com.docker.stack.namespace": "elasticsearch"
+            },
+            "TaskTemplate": {
+                "ContainerSpec": {
+                    "Image": "mattwiater/piarmy-elasticsearch-server:latest@sha256:837ca7fce22d3e71fc1d5b6e7e4c118e0c5112b95aa47c2f86404199dde1acc2",
+                    "Labels": {
+                        "com.docker.stack.namespace": "elasticsearch"
+                    },
+                    "Args": [
+                        "/bin/bash",
+                        "/home/start.sh"
+                    ],
+                    "Mounts": [
+                        {
+                            "Type": "bind",
+                            "Source": "/data",
+                            "Target": "/var/lib/elasticsearch"
+                        }
+                    ]
+                },
+                "Resources": {},
+                "RestartPolicy": {
+                    "Condition": "any",
+                    "Delay": 10000000000,
+                    "MaxAttempts": 10,
+                    "Window": 60000000000
+                },
+                "Placement": {
+                    "Constraints": [
+                        "node.labels.name == piarmy04"
+                    ]
+                },
+                "Networks": [
+                    {
+                        "Target": "y5koc6h07efrojr44lxi6d718",
+                        "Aliases": [
+                            "server"
+                        ]
+                    }
+                ],
+                "ForceUpdate": 0
+            },
+            "Mode": {
+                "Replicated": {
+                    "Replicas": 1
+                }
             },
             "EndpointSpec": {
                 "Mode": "vip",
@@ -436,23 +192,23 @@
             ],
             "VirtualIPs": [
                 {
-                    "NetworkID": "o35o2nu8it3676gr5p3k6xzx0",
-                    "Addr": "10.255.0.6/16"
+                    "NetworkID": "4gf2e4es8p52qji423c7gu7yv",
+                    "Addr": "10.255.0.8/16"
                 },
                 {
-                    "NetworkID": "w60lb6bt15zy2a4l9f3deakab",
-                    "Addr": "10.0.0.2/24"
+                    "NetworkID": "y5koc6h07efrojr44lxi6d718",
+                    "Addr": "10.0.0.4/24"
                 }
             ]
         }
     },
     {
-        "ID": "xhx9n4b6x3j65kgey8ubb8v16",
+        "ID": "cz0zgafn7fsjd9icqbywpgwkq",
         "Version": {
-            "Index": 501
+            "Index": 85
         },
-        "CreatedAt": "2017-10-10T16:35:41.295652024Z",
-        "UpdatedAt": "2017-10-12T23:41:18.99622774Z",
+        "CreatedAt": "2017-10-16T15:22:34.01529241Z",
+        "UpdatedAt": "2017-10-16T15:39:32.256990224Z",
         "Spec": {
             "Name": "piarmy_collector",
             "Labels": {
@@ -489,7 +245,7 @@
                 },
                 "Networks": [
                     {
-                        "Target": "w60lb6bt15zy2a4l9f3deakab",
+                        "Target": "y5koc6h07efrojr44lxi6d718",
                         "Aliases": [
                             "collector"
                         ]
@@ -515,6 +271,71 @@
                 "Monitor": 5000000000,
                 "MaxFailureRatio": 0,
                 "Order": "stop-first"
+            },
+            "EndpointSpec": {
+                "Mode": "vip",
+                "Ports": [
+                    {
+                        "Protocol": "tcp",
+                        "TargetPort": 80,
+                        "PublishedPort": 8000,
+                        "PublishMode": "ingress"
+                    },
+                    {
+                        "Protocol": "tcp",
+                        "TargetPort": 81,
+                        "PublishedPort": 8001,
+                        "PublishMode": "ingress"
+                    }
+                ]
+            }
+        },
+        "PreviousSpec": {
+            "Name": "piarmy_collector",
+            "Labels": {
+                "com.docker.stack.namespace": "piarmy"
+            },
+            "TaskTemplate": {
+                "ContainerSpec": {
+                    "Image": "mattwiater/piarmy-collector:latest@sha256:155970324ef01133ec34a521177cf396ede16d77f8b22f58440d10335f8e4f02",
+                    "Labels": {
+                        "com.docker.stack.namespace": "piarmy"
+                    },
+                    "Hostname": "piarmy-collector",
+                    "Mounts": [
+                        {
+                            "Type": "bind",
+                            "Source": "/home/pi/images/piarmy-collector/containerFiles",
+                            "Target": "/home/collector"
+                        }
+                    ]
+                },
+                "Resources": {},
+                "RestartPolicy": {
+                    "Condition": "any",
+                    "Delay": 10000000000,
+                    "MaxAttempts": 10,
+                    "Window": 60000000000
+                },
+                "Placement": {
+                    "Constraints": [
+                        "node.role == manager"
+                    ]
+                },
+                "Networks": [
+                    {
+                        "Target": "y5koc6h07efrojr44lxi6d718",
+                        "Aliases": [
+                            "collector"
+                        ]
+                    }
+                ],
+                "ForceUpdate": 0
+            },
+            "Mode": {
+                "Replicated": {
+                    "Replicas": 1
+                }
             },
             "EndpointSpec": {
                 "Mode": "vip",
@@ -568,12 +389,477 @@
             ],
             "VirtualIPs": [
                 {
-                    "NetworkID": "o35o2nu8it3676gr5p3k6xzx0",
-                    "Addr": "10.255.0.15/16"
+                    "NetworkID": "4gf2e4es8p52qji423c7gu7yv",
+                    "Addr": "10.255.0.10/16"
                 },
                 {
-                    "NetworkID": "w60lb6bt15zy2a4l9f3deakab",
-                    "Addr": "10.0.0.11/24"
+                    "NetworkID": "y5koc6h07efrojr44lxi6d718",
+                    "Addr": "10.0.0.6/24"
+                }
+            ]
+        }
+    },
+    {
+        "ID": "iqn6vqluiomkwm2uovqeq0b8j",
+        "Version": {
+            "Index": 116
+        },
+        "CreatedAt": "2017-10-16T15:39:38.113060126Z",
+        "UpdatedAt": "2017-10-16T15:41:25.217928978Z",
+        "Spec": {
+            "Name": "elasticsearch_kibana",
+            "Labels": {
+                "com.docker.stack.namespace": "elasticsearch"
+            },
+            "TaskTemplate": {
+                "ContainerSpec": {
+                    "Image": "mattwiater/piarmy-elasticsearch-kibana:latest@sha256:45623a72949939f193f3de7b9d290d97ee028a722d8e31e8f447c40fcff5e375",
+                    "Labels": {
+                        "com.docker.stack.namespace": "elasticsearch"
+                    },
+                    "StopGracePeriod": 10000000000,
+                    "DNSConfig": {}
+                },
+                "Resources": {},
+                "RestartPolicy": {
+                    "Condition": "any",
+                    "Delay": 10000000000,
+                    "MaxAttempts": 10,
+                    "Window": 60000000000
+                },
+                "Placement": {
+                    "Constraints": [
+                        "node.labels.name == piarmy04"
+                    ]
+                },
+                "Networks": [
+                    {
+                        "Target": "y5koc6h07efrojr44lxi6d718",
+                        "Aliases": [
+                            "kibana"
+                        ]
+                    }
+                ],
+                "ForceUpdate": 0
+            },
+            "Mode": {
+                "Replicated": {
+                    "Replicas": 1
+                }
+            },
+            "UpdateConfig": {
+                "Parallelism": 1,
+                "FailureAction": "pause",
+                "Monitor": 5000000000,
+                "MaxFailureRatio": 0,
+                "Order": "stop-first"
+            },
+            "RollbackConfig": {
+                "Parallelism": 1,
+                "FailureAction": "pause",
+                "Monitor": 5000000000,
+                "MaxFailureRatio": 0,
+                "Order": "stop-first"
+            },
+            "EndpointSpec": {
+                "Mode": "vip",
+                "Ports": [
+                    {
+                        "Protocol": "tcp",
+                        "TargetPort": 5601,
+                        "PublishedPort": 5601,
+                        "PublishMode": "ingress"
+                    }
+                ]
+            }
+        },
+        "PreviousSpec": {
+            "Name": "elasticsearch_kibana",
+            "Labels": {
+                "com.docker.stack.namespace": "elasticsearch"
+            },
+            "TaskTemplate": {
+                "ContainerSpec": {
+                    "Image": "mattwiater/piarmy-elasticsearch-kibana:latest@sha256:fb056be78fe3e1d74a52db488d1d26ef0ba74a9ffac9050421031aba439b7cdb",
+                    "Labels": {
+                        "com.docker.stack.namespace": "elasticsearch"
+                    }
+                },
+                "Resources": {},
+                "RestartPolicy": {
+                    "Condition": "any",
+                    "Delay": 10000000000,
+                    "MaxAttempts": 10,
+                    "Window": 60000000000
+                },
+                "Placement": {
+                    "Constraints": [
+                        "node.labels.name == piarmy04"
+                    ]
+                },
+                "Networks": [
+                    {
+                        "Target": "y5koc6h07efrojr44lxi6d718",
+                        "Aliases": [
+                            "kibana"
+                        ]
+                    }
+                ],
+                "ForceUpdate": 0
+            },
+            "Mode": {
+                "Replicated": {
+                    "Replicas": 1
+                }
+            },
+            "EndpointSpec": {
+                "Mode": "vip",
+                "Ports": [
+                    {
+                        "Protocol": "tcp",
+                        "TargetPort": 5601,
+                        "PublishedPort": 5601,
+                        "PublishMode": "ingress"
+                    }
+                ]
+            }
+        },
+        "Endpoint": {
+            "Spec": {
+                "Mode": "vip",
+                "Ports": [
+                    {
+                        "Protocol": "tcp",
+                        "TargetPort": 5601,
+                        "PublishedPort": 5601,
+                        "PublishMode": "ingress"
+                    }
+                ]
+            },
+            "Ports": [
+                {
+                    "Protocol": "tcp",
+                    "TargetPort": 5601,
+                    "PublishedPort": 5601,
+                    "PublishMode": "ingress"
+                }
+            ],
+            "VirtualIPs": [
+                {
+                    "NetworkID": "4gf2e4es8p52qji423c7gu7yv",
+                    "Addr": "10.255.0.6/16"
+                },
+                {
+                    "NetworkID": "y5koc6h07efrojr44lxi6d718",
+                    "Addr": "10.0.0.2/24"
+                }
+            ]
+        },
+        "UpdateStatus": {
+            "State": "completed",
+            "StartedAt": "2017-10-16T15:41:12.114817584Z",
+            "CompletedAt": "2017-10-16T15:41:25.217623095Z",
+            "Message": "update completed"
+        }
+    },
+    {
+        "ID": "q6y0e30n8iysk439c8arm1dkn",
+        "Version": {
+            "Index": 84
+        },
+        "CreatedAt": "2017-10-16T15:22:36.744297699Z",
+        "UpdatedAt": "2017-10-16T15:39:30.825023835Z",
+        "Spec": {
+            "Name": "piarmy_lambda",
+            "Labels": {
+                "com.docker.stack.namespace": "piarmy"
+            },
+            "TaskTemplate": {
+                "ContainerSpec": {
+                    "Image": "mattwiater/piarmy-lambda:latest@sha256:791d8c251a9921098d8090dae37056ee6d41bfe3206cb008c4f3f980f57806c9",
+                    "Labels": {
+                        "com.docker.stack.namespace": "piarmy"
+                    },
+                    "Hostname": "piarmy-lambda",
+                    "StopGracePeriod": 10000000000,
+                    "DNSConfig": {}
+                },
+                "Resources": {},
+                "RestartPolicy": {
+                    "Condition": "any",
+                    "Delay": 10000000000,
+                    "MaxAttempts": 10,
+                    "Window": 60000000000
+                },
+                "Placement": {},
+                "Networks": [
+                    {
+                        "Target": "y5koc6h07efrojr44lxi6d718",
+                        "Aliases": [
+                            "lambda"
+                        ]
+                    }
+                ],
+                "ForceUpdate": 0
+            },
+            "Mode": {
+                "Replicated": {
+                    "Replicas": 4
+                }
+            },
+            "UpdateConfig": {
+                "Parallelism": 1,
+                "FailureAction": "pause",
+                "Monitor": 5000000000,
+                "MaxFailureRatio": 0,
+                "Order": "stop-first"
+            },
+            "RollbackConfig": {
+                "Parallelism": 1,
+                "FailureAction": "pause",
+                "Monitor": 5000000000,
+                "MaxFailureRatio": 0,
+                "Order": "stop-first"
+            },
+            "EndpointSpec": {
+                "Mode": "vip",
+                "Ports": [
+                    {
+                        "Protocol": "tcp",
+                        "TargetPort": 80,
+                        "PublishedPort": 8002,
+                        "PublishMode": "ingress"
+                    }
+                ]
+            }
+        },
+        "PreviousSpec": {
+            "Name": "piarmy_lambda",
+            "Labels": {
+                "com.docker.stack.namespace": "piarmy"
+            },
+            "TaskTemplate": {
+                "ContainerSpec": {
+                    "Image": "mattwiater/piarmy-lambda:latest@sha256:791d8c251a9921098d8090dae37056ee6d41bfe3206cb008c4f3f980f57806c9",
+                    "Labels": {
+                        "com.docker.stack.namespace": "piarmy"
+                    },
+                    "Hostname": "piarmy-lambda"
+                },
+                "Resources": {},
+                "RestartPolicy": {
+                    "Condition": "any",
+                    "Delay": 10000000000,
+                    "MaxAttempts": 10,
+                    "Window": 60000000000
+                },
+                "Placement": {},
+                "Networks": [
+                    {
+                        "Target": "y5koc6h07efrojr44lxi6d718",
+                        "Aliases": [
+                            "lambda"
+                        ]
+                    }
+                ],
+                "ForceUpdate": 0
+            },
+            "Mode": {
+                "Replicated": {
+                    "Replicas": 4
+                }
+            },
+            "EndpointSpec": {
+                "Mode": "vip",
+                "Ports": [
+                    {
+                        "Protocol": "tcp",
+                        "TargetPort": 80,
+                        "PublishedPort": 8002,
+                        "PublishMode": "ingress"
+                    }
+                ]
+            }
+        },
+        "Endpoint": {
+            "Spec": {
+                "Mode": "vip",
+                "Ports": [
+                    {
+                        "Protocol": "tcp",
+                        "TargetPort": 80,
+                        "PublishedPort": 8002,
+                        "PublishMode": "ingress"
+                    }
+                ]
+            },
+            "Ports": [
+                {
+                    "Protocol": "tcp",
+                    "TargetPort": 80,
+                    "PublishedPort": 8002,
+                    "PublishMode": "ingress"
+                }
+            ],
+            "VirtualIPs": [
+                {
+                    "NetworkID": "4gf2e4es8p52qji423c7gu7yv",
+                    "Addr": "10.255.0.17/16"
+                },
+                {
+                    "NetworkID": "y5koc6h07efrojr44lxi6d718",
+                    "Addr": "10.0.0.13/24"
+                }
+            ]
+        }
+    },
+    {
+        "ID": "wefjmx5kd1anjcbedmnh0egj0",
+        "Version": {
+            "Index": 86
+        },
+        "CreatedAt": "2017-10-16T15:22:35.308458954Z",
+        "UpdatedAt": "2017-10-16T15:39:33.599636432Z",
+        "Spec": {
+            "Name": "piarmy_webserver",
+            "Labels": {
+                "com.docker.stack.namespace": "piarmy"
+            },
+            "TaskTemplate": {
+                "ContainerSpec": {
+                    "Image": "mattwiater/piarmy-webserver:latest@sha256:cc9fd913043725cea7b1e30364ce7879dcbea8b19ab5e21e7c29f44d362da0c5",
+                    "Labels": {
+                        "com.docker.stack.namespace": "piarmy"
+                    },
+                    "Hostname": "piarmy-webserver",
+                    "StopGracePeriod": 10000000000,
+                    "DNSConfig": {}
+                },
+                "Resources": {},
+                "RestartPolicy": {
+                    "Condition": "any",
+                    "Delay": 10000000000,
+                    "MaxAttempts": 10,
+                    "Window": 60000000000
+                },
+                "Placement": {},
+                "Networks": [
+                    {
+                        "Target": "y5koc6h07efrojr44lxi6d718",
+                        "Aliases": [
+                            "webserver"
+                        ]
+                    }
+                ],
+                "ForceUpdate": 0
+            },
+            "Mode": {
+                "Replicated": {
+                    "Replicas": 4
+                }
+            },
+            "UpdateConfig": {
+                "Parallelism": 1,
+                "FailureAction": "pause",
+                "Monitor": 5000000000,
+                "MaxFailureRatio": 0,
+                "Order": "stop-first"
+            },
+            "RollbackConfig": {
+                "Parallelism": 1,
+                "FailureAction": "pause",
+                "Monitor": 5000000000,
+                "MaxFailureRatio": 0,
+                "Order": "stop-first"
+            },
+            "EndpointSpec": {
+                "Mode": "vip",
+                "Ports": [
+                    {
+                        "Protocol": "tcp",
+                        "TargetPort": 80,
+                        "PublishedPort": 80,
+                        "PublishMode": "ingress"
+                    }
+                ]
+            }
+        },
+        "PreviousSpec": {
+            "Name": "piarmy_webserver",
+            "Labels": {
+                "com.docker.stack.namespace": "piarmy"
+            },
+            "TaskTemplate": {
+                "ContainerSpec": {
+                    "Image": "mattwiater/piarmy-webserver:latest@sha256:cc9fd913043725cea7b1e30364ce7879dcbea8b19ab5e21e7c29f44d362da0c5",
+                    "Labels": {
+                        "com.docker.stack.namespace": "piarmy"
+                    },
+                    "Hostname": "piarmy-webserver"
+                },
+                "Resources": {},
+                "RestartPolicy": {
+                    "Condition": "any",
+                    "Delay": 10000000000,
+                    "MaxAttempts": 10,
+                    "Window": 60000000000
+                },
+                "Placement": {},
+                "Networks": [
+                    {
+                        "Target": "y5koc6h07efrojr44lxi6d718",
+                        "Aliases": [
+                            "webserver"
+                        ]
+                    }
+                ],
+                "ForceUpdate": 0
+            },
+            "Mode": {
+                "Replicated": {
+                    "Replicas": 4
+                }
+            },
+            "EndpointSpec": {
+                "Mode": "vip",
+                "Ports": [
+                    {
+                        "Protocol": "tcp",
+                        "TargetPort": 80,
+                        "PublishedPort": 80,
+                        "PublishMode": "ingress"
+                    }
+                ]
+            }
+        },
+        "Endpoint": {
+            "Spec": {
+                "Mode": "vip",
+                "Ports": [
+                    {
+                        "Protocol": "tcp",
+                        "TargetPort": 80,
+                        "PublishedPort": 80,
+                        "PublishMode": "ingress"
+                    }
+                ]
+            },
+            "Ports": [
+                {
+                    "Protocol": "tcp",
+                    "TargetPort": 80,
+                    "PublishedPort": 80,
+                    "PublishMode": "ingress"
+                }
+            ],
+            "VirtualIPs": [
+                {
+                    "NetworkID": "4gf2e4es8p52qji423c7gu7yv",
+                    "Addr": "10.255.0.12/16"
+                },
+                {
+                    "NetworkID": "y5koc6h07efrojr44lxi6d718",
+                    "Addr": "10.0.0.8/24"
                 }
             ]
         }
